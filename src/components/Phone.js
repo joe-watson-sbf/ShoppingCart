@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import { DragSource } from 'react-dnd';
 import { connect } from 'react-redux'
-
 import { ItemTypes } from './Constants';
 import { moveIncart } from '../actions/phones'
+
 
 const phoneSpec = {
     beginDrag(props) {
         return {
             name: props.brand,
-            id: props.id
+            id: props.id,
+            url: props.url
 
         }
     },
@@ -35,6 +36,7 @@ let collect = (connect, monitor) => {
 class Phone extends Component {
     render() {
         const { brand } = this.props;
+        const { url } = this.props;
         const { isDragging, connectDragSource } = this.props;
 
         const opacity = isDragging ? 0.4 : 1;
@@ -44,7 +46,7 @@ class Phone extends Component {
         const phoneClass = isDragging ? 'ui card phone drag' : 'ui card phone';
         return connectDragSource(
             <div className={phoneClass} style={style}>
-                <div className="image"><img alt='phone' src="/images/phone.jpg" /></div>
+                <div className="image"><img alt='phone' src={url} /></div>
                 <div className="content">
                     <div className="phone-name">{brand}</div>
                     <div className="meta">8G RAM, 16G memory</div>

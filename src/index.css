@@ -77,7 +77,6 @@ h1 {
 	width: 10rem !important;
 	margin: 0 1em 1em 0.25em !important;
 	padding: .5em !important;
-
 	cursor: pointer;
 	background: #f7f7f7 !important;
 
@@ -103,7 +102,6 @@ h1 {
 	font-size: 8px !important;
 }
 
-/* Drag and Drop */
 
 .drag {
 	background-color: lightblue !important;

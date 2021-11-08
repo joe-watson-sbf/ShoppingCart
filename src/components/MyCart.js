@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+const url = 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-graphite-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652956000'
 
 class MyCart extends Component {
     render() {
@@ -9,11 +10,11 @@ class MyCart extends Component {
                     <div className="ui card centered">
                         <div className="content">
                             <img alt='phone'
-                                src="/images/phone.jpg"
+                                src={url}
                                 className="ui mini right floated image"
                             />
-                            <div className="header">Test_Phone</div>
-                            <div className="meta">$ 80</div>
+                            <div className="header">iPhone 11</div>
+                            <div className="meta">$ 600</div>
                             <div className="meta price">12 minutes</div>
                             <div className="description">
                                 8G RAM, 16G memory

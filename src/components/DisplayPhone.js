@@ -10,7 +10,12 @@ class DisplayPhone extends Component {
             <div>
                 {displayPhones
                     .map((phone) => (
-                        <Phone key={phone} id={phone} brand={phones[phone].brand} />
+                        <Phone 
+                            key={phone} 
+                            id={phone} 
+                            brand={phones[phone].brand} 
+                            url={phones[phone].url}
+                            />
 
                     ))}
             </div>
